@@ -118,3 +118,58 @@ def game_hash
     }
   }
 end
+
+def players
+  player_array = game_hash[:home][:players]
+  player_array.concat(game_hash[:away][:players])
+
+  return player_array
+end
+
+def num_points_scored(player_name)
+  # DONE - Create the hash
+  # GOAL: Find the points for a given player
+  # - Iterate through the hash (through home and away)
+
+  # player_array = game_hash[:home][:players]
+  # player_array.concat(game_hash[:away][:players])
+
+  # players.each do |player_hash|
+  #   # Iterate again and find the hash that has the player name that matches
+  #   # If found, return back the points for that player
+  #   if player_name == player_hash[:player_name]
+  #     return player_hash[:points]
+  #     puts "Here is a player:#{player_hash}"
+  #   end
+  # end
+
+  find_player(player_name)[:points]
+
+  # Stops the program and gives us the context of everything available
+  # binding.prqy
+end
+
+def shoe_size(player_name)
+  find_player(player_name)[:shoe]
+end
+
+
+def find_player(player_name)
+  players.find do |player_hash|
+    # Iterate again and find the hash that has the player name that matches
+    # If found, return back the points for that player
+    if player_name == player_hash[:player_name]
+      return player_hash
+    end
+  end
+end
+
+# puts find_player("Ben Gordon")
+
+
+
+
+
+
+
+# puts game_hash
