@@ -155,7 +155,7 @@ end
 
 
 def find_player(player_name)
-  players.find do |player_hash|
+  players.each do |player_hash|
     # Iterate again and find the hash that has the player name that matches
     # If found, return back the points for that player
     if player_name == player_hash[:player_name]
