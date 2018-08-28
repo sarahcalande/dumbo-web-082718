@@ -6,13 +6,14 @@ require 'pry'
 
 
 def make_request
+  # RestClient.get let's us grab data at this URL
   beef = RestClient.get "https://www.reddit.com/.json"
+  # JSON.parse takes the text we want to convert to
+  # a hash and returns that back for us
   JSON.parse(beef.body)
-  # binding.pry
 end
 
 def view(json)
-
   post_array = json["data"]["children"].map do |post|
     {
       title: post["data"]["title"],
