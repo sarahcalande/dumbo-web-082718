@@ -1,25 +1,35 @@
-# Useful for testing your code
+require 'pry'
+
 require_relative '../lib/author.rb'
 require_relative '../lib/book.rb'
 
-require 'pry'
+prince = Author.new("Maxcell Prince Wilson", "He really likes corgis")
+prince_book = prince.write_book("Corgis", 36)
+prince_book = prince.write_book("French Bulldog", 40)
+prince_book = prince.write_book("Daschund", 50)
+
+jane = Author.new("Jane", "He really likes cats")
+jane_book = jane.write_book("Tabby", 36)
+jane_book = jane.write_book("Ragdoll", 40)
+jane_book = jane.write_book("Siamese", 50)
 
 
-# I can declare variables here
-gigi = Author.new("Gigi", 1)
-eva = Author.new("Eva", 1)
+#
+# puts "Welcome #{prince.name}."
+# puts "Bio: \"#{prince.bio}\""
+#
+# puts "==================="
+#
+# puts "The book is titled: #{prince_book.title}"
+# puts "The book has #{prince_book.pages} pages"
+# puts "The book is written by #{prince_book.author.name}"
 
+# puts "Here are ALL the books:"
+# Book.all.each do |book|
+#   puts "- #{book.title} - #{book.author.name}"
+# end
 
-gigi.write_book("Linters and Such", 123)
-gigi.write_book("&&", 1233)
-eva.write_book("Secret Life of Corgis", 456)
-
-puts fave_books
-
-# gigi_book1 = Book.new("Linters and Such", 123, gigi)
-# gigi_book2 = Book.new("&&", 234, gigi)
-
-
-
-binding.pry
-0
+puts "Here are all of the books written by Prince:"
+prince.books.each do |book|
+  puts "- #{book.title}"
+end
