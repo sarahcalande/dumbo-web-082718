@@ -1,0 +1,3 @@
+- GET params (query string)
+- Different types of requests
+- Responses from dynamic vs static servers

@@ -1,0 +1,1 @@
+Superhero.create(name: "Spider-Man")
