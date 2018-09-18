@@ -1,0 +1,15 @@
+
+
+<form method="GET" action="/dogs">
+  <input type="text" placeholder="search term" name="breed" value="<%= @breed_filter %>" />
+  <input type="submit" />
+</form>
+
+
+<% @best_puppers.each do |pupper| %>
+  <li>
+    <strong><%= pupper.name %></strong>
+    <br />
+    <%= pupper.breed %> 
+  </li>
+<% end %>
