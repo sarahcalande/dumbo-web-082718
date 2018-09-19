@@ -113,3 +113,30 @@
     line-height: 24px;
   }
 }
+input {
+  font-size: 18px;
+}
+.dogs {
+  display: flex;
+  flex-wrap: wrap;
+  clear: both
+}
+
+
+.dog {
+  min-width: 162px;
+  margin: 10px 18px;
+  padding: 20px;
+  box-shadow: 0 2px 5px #00000022;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.new-dog {
+  float: right;
+  border: 5px outset gray;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 20px;
+}

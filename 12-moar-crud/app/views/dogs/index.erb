@@ -1,15 +1,17 @@
 
+<a href="/dogs/new" class="new-dog">New dog</a>
 
 <form method="GET" action="/dogs">
   <input type="text" placeholder="search term" name="breed" value="<%= @breed_filter %>" />
   <input type="submit" />
 </form>
 
-
+<ul class="dogs">
 <% @best_puppers.each do |pupper| %>
-  <li>
+  <li class="dog">
     <strong><a href="/dogs/<%= pupper.id %>"><%= pupper.name %></a></strong>
     <br />
     <%= pupper.breed %> 
   </li>
 <% end %>
+</ul>
