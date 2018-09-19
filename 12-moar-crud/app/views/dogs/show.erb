@@ -1,7 +1,13 @@
 <h1><%= @dog.name %></h1>
+<a href="/dogs/<%= @dog.id %>/edit">Edit <%= @dog.name %></a>
 
 <dl>
 <dt>Breed:</dt><dd><%= @dog.breed %></dd>
 <dt>Age:</dt><dd><%= @dog.age %></dd>
 </dl>
 <img src="<%= @dog.pic %>" />
+
+<form action="/dogs/<%= @dog.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="Send <%= @dog.name %> to live on a farm" />
+</form>

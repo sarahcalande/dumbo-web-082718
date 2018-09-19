@@ -9,6 +9,8 @@ REST / CRUD (afternoon)
 
 REST / CRUD (morning)
 - Updating
-  - one small caveat
+  - refactor type caveat
+  - one small other caveat 
 - Deleting
+
 

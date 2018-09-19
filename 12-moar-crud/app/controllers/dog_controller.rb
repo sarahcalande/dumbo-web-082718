@@ -12,6 +12,7 @@ class DogController < ApplicationController
   end
 
   get '/dogs/new' do
+    @dog = Dog.new
     erb(:"dogs/new")
   end
 
@@ -27,7 +28,7 @@ class DogController < ApplicationController
 
     # @dog.save
 
-    @dog = Dog.create(params)
+    @dog = Dog.create(params[:dog])
 
     redirect "/dogs/#{ @dog.id }"
   end
@@ -36,6 +37,23 @@ class DogController < ApplicationController
     @dog = Dog.find(params[:id])
 
     erb :"dogs/show"
+  end
+
+  get '/dogs/:id/edit' do
+    @dog = Dog.find(params[:id])
+    erb :"dogs/edit"
+  end
+
+  put '/dogs/:id' do
+    @dog = Dog.find(params[:id])
+    @dog.update(params[:dog])
+    redirect to "/dogs/#{ @dog.id }"
+  end
+
+  delete '/dogs/:id' do
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect to "/dogs"
   end
 
 
