@@ -1,0 +1,12 @@
+<a href="/blood-oaths/new" class="button" style="float: right;">New Blood Oath</a>
+<ol style="clear: both;">
+<% @blood_oaths.each do |blood_oath| %>
+  <li>
+    <%= erb :link_by_name, locals: { thing: blood_oath.follower } %> became a follower of <%= erb :link_by_name, locals:  { thing: blood_oath.cult } %> under a <%= blood_oath.happened_at_full_moon ? "🌕" : "🌑" %> moon
+    <form class="delete-form" method="POST" action="/blood-oaths/<%= blood_oath.id %>">
+      <input type="hidden" name="_method" value="DELETE" />
+      <input class="button" type="submit" value="deprogram" />
+    </form>
+  </li>
+<% end %>
+</ol>

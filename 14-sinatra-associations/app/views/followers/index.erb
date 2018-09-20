@@ -1,0 +1,9 @@
+
+<ol>
+<% @followers.each do |follower| %>
+  <li>
+    <a href="/followers/<%= follower.id %>"><%= follower.name %></a>
+    <span><%= follower.in_trance ? "🤪" : "🙂" %></span>
+  </li>
+<% end %>
+</ol>

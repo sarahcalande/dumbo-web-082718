@@ -1,0 +1,36 @@
+<table>
+  <tbody>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <%= @follower.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Age
+      </td>
+      <td>
+        <%= @follower.age %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Is in a trance?
+      </td>
+      <td>
+        <%= @follower.in_trance ? "🤪" : "🙂" %>
+      </td>
+    </tr>
+    <tr>
+      <td>Cults:</td>
+      <td>
+        <%= @follower.cults.map { |cult|
+          erb :link_by_name, { locals: { thing: cult } }
+        }.join(", ")  %>
+      </td>
+    </tr>
+  </tbody>
+</table>

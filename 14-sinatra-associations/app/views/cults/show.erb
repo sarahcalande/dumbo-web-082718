@@ -1,0 +1,38 @@
+<table>
+  <tbody>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <%= @cult.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Description
+      </td>
+      <td>
+        <%= @cult.description %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Is active?
+      </td>
+      <td>
+        <%= @cult.active ? "✅" : "🚫" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Followers
+      </td>
+      <td>
+        <%= @cult.followers.map { |follower|
+          erb :link_by_name, { locals: { thing: follower } }
+        }.join(", ")  %>
+      </td>
+    </tr>
+  </tbody>
+</table>

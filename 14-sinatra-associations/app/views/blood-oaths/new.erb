@@ -1,0 +1,40 @@
+<form action="/blood-oaths" method="POST">
+
+  <label for="cult_id">Cult</label>
+  <select name="blood_oath[cult_id]" class="button">
+    <% @all_cults.each do |cult| %>
+      <option value="<%= cult.id %>"><%= cult.name %></option>
+    <% end %>
+  </select>
+  <!-- <input type="text" name="blood_oath[cult_id]" /> -->
+  <br />
+
+  <label for="follower_id">Follower</label>
+  <select name="blood_oath[follower_id]" class="button">
+    <% @all_followers.each do |follower| %>
+      <option value="<%= follower.id %>">
+        <%= follower.name %></option>
+    <% end %>
+  </select>
+  <!-- <input type="text" name="blood_oath[follower_id]" /> -->
+  <br />
+
+<!--   <select name="greeting">
+    <option value="1">Hellos</option>
+    <option value="2">Hola</option>
+  </select> -->
+
+  <ol>
+    <li>
+      <input id="yes_full" type="radio" name="blood_oath[happened_at_full_moon]" value="true" />
+      <label for="yes_full">🌕 Happened at the full moon 🌝</label>
+    </li>
+    <li>
+      <input id="not_full" type="radio" name="blood_oath[happened_at_full_moon]" value="false" checked />
+      <label for="not_full">🌚 Not at the full moon 🌑</label>
+    </li>
+  </ol>
+
+  <input type="submit" class="button" value="Sign me right up!" />
+
+</form>

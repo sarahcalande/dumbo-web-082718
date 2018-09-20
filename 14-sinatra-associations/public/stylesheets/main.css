@@ -1,0 +1,208 @@
+
+body {
+  font-size: 18px;
+}
+
+@media screen {
+  /* --- Reset Styles --- */
+  * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* --- Welcome Page Styles --- */
+  body {
+    background-color: lightblue;
+    color: #333;
+    font-family: Sans-Serif;
+    line-height: 18px;
+  }
+
+  .wrapper {
+    background: #fff;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 16px auto;
+    max-width: 960px;
+    padding: 2.25%; /* 18px / 800px */
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  h2 {
+    border-bottom: 2px solid #ccc;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+
+  .content {
+    float: left;
+    width: 60%; /* 480px / 800px */
+  }
+
+  .sidebar {
+    background: #eee;
+    border: 1px solid #ccc;
+    float: right;
+    padding: 2.08333333333%; /* 5px / 240px */
+    width: 30%; /* 240px / 800px */
+  }
+
+  .sidebar ul {
+    font-size: 14px;
+  }
+
+  .branding {
+    clear: both;
+  }
+
+  footer.branding {
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .content, .sidebar {
+    float: none;
+    width: 100%;
+  }
+
+  .sidebar {
+    background: transparent;
+    border: none;
+    border-top: 2px solid #ccc;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+.main-nav li {
+  display: inline;
+  margin: 10px 0;
+  user-select: none;
+}
+.main-nav li .button {
+  display: block;
+}
+
+.button {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #222;
+  padding: 15px;
+  background: linear-gradient(to bottom, #eee, #eee 0%, #ddd 100%);
+  white-space: nowrap;
+  border-radius: 100px;
+  background-position: top center;
+  box-shadow: 0 2px 10px #00000011;
+  transition: transform .2s, 
+              box-shadow .2s, 
+              background-size .2s,
+              background-position .2s;
+  background: linear-gradient(to bottom, #eee, #eee 0%, #aaa 100%);
+  background-position: top left;
+  background-size: 100% 200%;
+  border: none;
+}
+
+.button:hover {
+  box-shadow: 0 4px 15px #00000033;
+  transform: translateY(-2px);
+  background-size: 100% 100%;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #056597;
+}
+
+.button:active {
+  box-shadow: 0 0px 5px #00000011, inset 0 5px 10px #00000033;
+  transform: translateY(2px);
+  background-size: 100% 1000%;
+}
+
+.button.selected {
+  color: #eee;
+  background-image: linear-gradient(to bottom, #666, #222 0%, #666 50%, #222 100%);
+}
+.button.selected:hover {
+  background-size: 100% 200%;
+  background-position: center -100%; 
+}
+.button.selected:focus {
+  box-shadow: 0 0 0 5px #ff0000;
+}
+
+.moje {
+  text-shadow: 0 0 1px #000000;
+}
+.selected .moje {
+  text-shadow: 0 0 1px #ffffff;
+}
+
+li {
+  margin: 15px 0;
+}
+td {
+  padding: 0 15px 15px 0;
+}
+
+.delete-form {
+  display: inline;
+}
+input.button {
+  background: skyblue;
+  color: white;
+}

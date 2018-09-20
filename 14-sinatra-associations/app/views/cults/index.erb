@@ -1,0 +1,9 @@
+
+<ol>
+<% @cults.each do |cult| %>
+  <li>
+    <a href="/cults/<%= cult.id %>"><%= cult.name %></a>
+    <span><%= cult.description %></span>
+  </li>
+<% end %>
+</ol>
