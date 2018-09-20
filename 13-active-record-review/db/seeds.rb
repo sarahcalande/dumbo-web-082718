@@ -30,7 +30,7 @@ cults.each do |cult_data|
   3.times do
     # foll = Follower.create(name: Faker::BojackHorseman.character, location: cult_data[:location])
     # BloodOath.create(cult_id: cult.id, follower_id: foll.id)
-    # cult.followers << Follower.create(name: Faker::BojackHorseman.character, location: cult_data[:location])
+    cult.followers << Follower.create(name: Faker::BojackHorseman.character, location: cult_data[:location])
   end
 
 end
