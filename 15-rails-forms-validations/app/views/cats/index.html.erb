@@ -1,0 +1,10 @@
+
+<ol>
+  <% @cats.each do |kitty| %>
+  <li>
+    <%# link_to kitty.name, cat_path(kitty.id) %>
+    <%# link_to kitty.name, cat_path(kitty) %>
+    <%= link_to kitty.name, kitty %>
+  </li>
+  <% end %>
+</ol>

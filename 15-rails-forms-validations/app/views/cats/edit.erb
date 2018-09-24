@@ -1,0 +1,54 @@
+<!-- <form action="/cats/<%= @cat.id %>" method="POST">
+  <input type="hidden" value="PUT" name="_method">
+
+</form> -->
+
+
+<%# form_tag cat_path(@cat), method: :put %>
+<% if @cat.errors %>
+  <ul>
+  <% @cat.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @cat do |form| %>
+
+<!--   <label for="name">Name</label>
+  <input type="text" id="name" name="name" value="<%= @cat.name %>" /> -->
+
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :fluffiness %>
+    <%= form.text_field :fluffiness %>
+  </p>
+
+  <p>
+    <%= form.label :birth_year, "Birth Year" %>
+    <%= form.text_field :birth_year %>
+  </p>
+
+  <%= form.submit "Update #{ @cat.name }" %>
+  
+  
+<% end %>
+
+
+<%# form_for Cat.new do |form| %>
+
+<%# end %>
+
+
+<%# form_with model: @cat do |form| %>
+
+<%# end %>
+
+<%# form_with url: cats_path, method: :delete do %>
+
+<%# end %>
