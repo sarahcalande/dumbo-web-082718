@@ -1,24 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# First things first
+ * review associations
+ * review active record associations
 
-Things you may want to cover:
+# Deliverables
+* List out the songs in a playlist
+  *  review `.includes`
+* Add a song to a playlist the easy way
+* Add a song to a playlist the nice way
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

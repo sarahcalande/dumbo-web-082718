@@ -1,0 +1,30 @@
+<h1><%= @playlist.name %></h1>
+
+<table>
+
+<% @playlist.songs.each do |song| %>
+  <tr>
+    <td>
+      <%= link_to song.name, song %>
+    </td>
+    <td>
+      <%= song.duration %>
+    </td>
+  </tr> 
+<% end %>
+</table>
+
+<h2>Add song</h2>
+<%= form_for Playlisting.new do |form| %>
+
+  <%= form.hidden_field :playlist_id, value: @playlist.id %>
+
+  <p>
+    <%= form.label :song_id %>
+    <%= form.collection_select(:song_id, @all_songs, :id, :name) %>
+  </p>
+
+  <%= form.submit %>
+<% end %> 
+
+<%= link_to "Edit", edit_playlist_path(@playlist) %>
