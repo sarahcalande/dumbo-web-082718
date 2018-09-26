@@ -1,0 +1,14 @@
+
+<%= form_for @playlisting do |form| %>
+
+  <p>
+    <%= form.label :song_id %>
+    <%= form.collection_select(:song_id, @all_songs, :id, :name) %>
+  </p>
+  <p>
+    <%= form.label :playlist_id %>
+    <%= form.collection_select(:playlist_id, @all_playlists, :id, :name) %>
+  </p>
+
+  <%= form.submit %>
+<% end %> 
