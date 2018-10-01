@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000 linear-gradient(#222, #666) fixed;
+  color: #fff;
+  font-family: 'Arial Rounded MT Bold', sans-serif
+}
+header {
+  font-size: 42px;
+  padding: 20px;
+  text-align: center;
+}
+
+.colors {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+.color {
+  padding: 20px;
+  color: #00000099;
+  /*text-shadow: 0 5px 20px #00000055;*/
+  font-weight: 900;
+  font-family: 'Operator Mono', monospace;
+  font-style: italic;
+  font-size: 32px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 15px 50px #00000033;
+}
+.votes {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+  vertical-align: middle;
+  font-style: normal;
+}
+.votes form {
+  display: inline;
+}
+.votes button {
+  border: none;
+  background: #ffffffbb;
+  border-radius: 10px;
+  padding: 0 5px;
+  font-size: 18px;
+  outline: none;
+  transition: transform .5s;
+  margin-left: 5px;
+}
+.votes button:hover {
+  background: #ffffffdd;
+}
+.votes button:focus {
+  box-shadow: 0 0 0px 3px #fff;
+  transform: rotate(360deg);
+}
+.votes button.nope .vote,
+.votes button.vote .nope {
+  display: none;
+}
