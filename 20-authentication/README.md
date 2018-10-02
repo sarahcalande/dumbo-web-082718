@@ -1,10 +1,36 @@
-* Quick announcement: https://media.giphy.com/media/R7m04yMaGWVeE/giphy.gif
+# Part I
 
-# Questions to answer
-* What does it mean that HTTP is stateless?
-* What are cookies and how do they work?
-* How can we use cookies in a Rails app?
-* What kind of data can / should you store in a cookie?
-* How can (should) we use sessions in a Rails app?
-* How can we use flash in a rails app?
+## Let's talk about
+* How to store passwords
+* Hashing
+* Rainbow tables
+* Salts
 
+## Let's implement
+* Sign up
+  * Routes
+  * Migration
+  * Controller
+  * View
+  * Validations
+
+# Part II
+
+## Let's implement
+
+* Log in
+  * Routes
+  * Controller
+  * View
+  * Validations
+
+
+## Let's talk about
+
+* Authorization vs. Authentication
+
+## Let's implement
+
+* Log out
+  * Route
+  * View

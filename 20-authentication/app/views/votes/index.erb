@@ -1,0 +1,10 @@
+<h1>Past votes</h1>
+<ol>
+<% @user_votes.each do |vote| %>
+  <li>
+  #<%= vote.color.hex %>
+  <em><%= time_ago_in_words(vote.created_at) %> ago</em>
+  <%= link_to "Delete", color_vote_path(vote.color.id, vote.id), method: :delete %>
+  </li>
+<% end %>
+</ol>

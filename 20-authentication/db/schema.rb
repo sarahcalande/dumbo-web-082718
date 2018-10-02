@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_184805) do
+ActiveRecord::Schema.define(version: 2018_10_02_135950) do
 
   create_table "colors", force: :cascade do |t|
     t.string "hex"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2018_10_01_184805) do
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password_digest"
   end
 
   create_table "votes", force: :cascade do |t|
