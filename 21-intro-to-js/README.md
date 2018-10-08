@@ -69,6 +69,7 @@
   	+ NaN
   	+ null
   	+ undefined
+  	+ ""
 
   - coersion
   - PBV, PBR
