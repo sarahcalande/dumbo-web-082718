@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+ li.color {
+    font-family: georgia;
+}
+
+.color {
+    width: 160px;
+    font-family: monospace;
+    padding: 19px 13px 30px 78px;
+    margin: 20px 0 30px;
+    border: 5px solid gray;
+    border-style: ridge;
+    border-radius: 25px;
+}
+
+body {
+    font-family: sans-serif !important;
+    background: pink url(https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225919/Pembroke-Welsh-Corgi-On-White-01.jpg) repeat-y center top;
+    background-size: 160px auto;
+}
+
