@@ -42,6 +42,10 @@
   #### Query Selectors
   - functions we are calling on the document or another Node
   - use querySelectorAll when you know you need multiple results
+  - pass argument as string
+    - for id, prepend # to the string
+    - for class, prepend . to the string
+    - for tag, just list the tag name
   - querySelectorAll
     - selects and returns all matches
     - returns NodeList (array-like object)
