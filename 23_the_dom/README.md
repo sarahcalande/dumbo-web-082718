@@ -9,7 +9,7 @@
 - DOM (Document Object Model)
   - A tree structure starting at the document
   - Every element is a node related to other nodes in the tree
-  - https://vignette.wikia.nocookie.net/harrypotter/images/8/83/Black_Family_Tree.png/revision/latest?cb=20130315010850
+  - https://www.pottermore.com/features/black-family-tree
 - Element interfaces
   - Elements have properties that can be manipulated
   - Different elements (`table`, `p`, `image`) support different methods
@@ -18,11 +18,11 @@
   - Examples
     - `console` object
     - `navigator` object
-    - `location` objectt
+    - `location` object
     - `history` object
     - `localStorage` object
     - timers
-  - Everything that is not part of the document!
+  - Everything that is not part of the document
 - DOM and BOM APIs
   - The code that is available to us to manipulate the DOM and the BOM
 - How to add things to the DOM
