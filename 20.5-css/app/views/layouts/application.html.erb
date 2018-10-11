@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite colors</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="auth-nav">
+        <% if @current_user %>
+          <h3>Logged in as: <%= @current_user.username %></h3>
+        <% end %>
+        <ul>
+          <li><%= link_to "Colors", colors_path %></li>
+          <% unless @current_user %>
+          <li><a href="<%= new_session_path %>">Log in</a></li>
+          <li><a href="<%= new_user_path %>">Sign up</a></li>
+          <% else %>
+          <li><%= link_to "Votes", user_votes_path(@current_user.username) %></li>
+          <li><%= form_tag sessions_path, method: :delete do %>
+              <%= submit_tag "Log out" %>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+      <% if @current_user %>
+        <h2>Votes remaining: <%= @votes %></h2>
+      <% end %>
+      <% if @message %>
+      <div class="message">
+        <%= @message %>
+      </div>
+      <% end %>
+      <% if @errors %>
+      <ul class="errors">
+        <% @errors.each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>
