@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  text-align: center;
+}
+
+.half-screen {
+  width:50vw;
+  height: 100vh;
+}
+
+#left {
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 15px;
+}
+
+#right {
+  overflow-y: scroll;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  padding: 15px;
+  margin: 10px;
+}
+
+img {
+  width: 300px;
+}
