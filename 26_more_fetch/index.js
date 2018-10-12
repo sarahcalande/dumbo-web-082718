@@ -1,31 +1,71 @@
-//  always start your index.js file with this
 document.addEventListener('DOMContentLoaded', () => {
-  // first thing is fetch data from API
-  // once we have data, programmatically put it on the dom
+  const form = document.querySelector("#new-item-form")
+
+  getAllItems()
+
+
+  form.addEventListener("submit", handleSubmit)
+
+
+})
+
+function getAllItems(){
   fetch('http://localhost:3000/items')
     .then(resp => resp.json())
-    .then(items => {
-      // all the code in here waits for the data to return before running
-      // go through array
-      items.forEach((item) => {
-        // each item needs elements created
-        // properties assigned to elements
-        // add any event listeners?
-        const li = document.createElement('li')
-        const h = document.createElement('h3')
-        h.innerText = item.name
-        const p = document.createElement('p')
-        p.innerText = item.category
-        const img = document.createElement('img')
-        img.src = item.image
+    .then(items => items.forEach(addSingleItem))
+}
 
-        // connect elements to each other
-        li.append(h, p, img)
+function handleSubmit(event){
+  event.preventDefault()
+  const name = event.target.name.value
+  const category = event.target.category.value
+  const image = event.target.image.value
 
-        // attach it all to a parent on the DOM
-        const list = document.querySelector('#item-list')
-        list.append(li)
+  createItem(name, category, image)
+    .then(res => res.json())
+    .then(addSingleItem)
 
-      })
-    })
-})
+
+
+}
+
+function createItem(name, category, image){
+  const options = {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      category: category,
+      image: image
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
+
+
+  return fetch('http://localhost:3000/items', options)
+}
+
+// function addItemsToPage(items){
+//   console.log(items);
+//   items.forEach(addSingleItem)
+//
+// }
+
+function addSingleItem(item){
+  const list = document.querySelector('#item-list')
+
+  const li = document.createElement('li')
+  const h = document.createElement('h3')
+  h.innerText = item.name
+  const p = document.createElement('p')
+  p.innerText = item.category
+  const img = document.createElement('img')
+  img.src = item.image
+
+
+  li.append(h, p, img)
+
+
+  list.append(li)
+}
