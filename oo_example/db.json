@@ -1,0 +1,64 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Baby",
+      "breed": "Schnauzer",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "name": "Teddy",
+      "breed": "Rhodesian Ridgeback",
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "name": "Snickers",
+      "breed": "Corgi",
+      "gender": "female"
+    },
+    {
+      "id": 4,
+      "name": "Harvey",
+      "breed": "Corgi",
+      "gender": "male"
+    },
+    {
+      "id": 5,
+      "name": "Gracie",
+      "breed": "Corgi",
+      "gender": "female"
+    },
+    {
+      "id": 6,
+      "name": "Oreo",
+      "breed": "Corgi",
+      "gender": "male"
+    },
+    {
+      "id": 7,
+      "name": "Diamond",
+      "breed": "Labrador",
+      "gender": "female"
+    },
+    {
+      "id": 8,
+      "name": "Chloe",
+      "breed": "Not a Corgi",
+      "gender": "male"
+    },
+    {
+      "id": 9,
+      "name": "Shelby",
+      "breed": "Kuvasz",
+      "gender": "male"
+    },
+    {
+      "id": 10,
+      "name": "Patches",
+      "breed": "Dingo",
+      "gender": "male"
+    }
+  ]
+}
