@@ -1,0 +1,34 @@
+{
+  "chores": [
+    {
+      "id": 1,
+      "title": "Wash Dishes",
+      "priority": "Important",
+      "duration": "15min"
+    },
+    {
+      "id": 2,
+      "title": "Fix Bed",
+      "priority": "Can Wait a little",
+      "duration": "3min"
+    },
+    {
+      "id": 3,
+      "title": "Catch Matt doing weird things",
+      "priority": "MOI IMPORTANTE",
+      "duration": "however long it takes"
+    },
+    {
+      "title": "do laundry",
+      "priority": "high",
+      "duration": "30 minutes",
+      "id": 4
+    },
+    {
+      "title": "sweep floor",
+      "priority": "low",
+      "duration": "10 minutes",
+      "id": 5
+    }
+  ]
+}
