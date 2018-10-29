@@ -39,7 +39,7 @@ How To Be Successful
   - Review lecture videos
   - Pull down lecture code
 
-## Intro to React
+## Intro to React (26:06)
 
 - Vanilla JS vs React
   - Why React?
@@ -49,46 +49,33 @@ How To Be Successful
     - Hard to manage
     - Virtual DOM (https://www.codecademy.com/articles/react-virtual-dom)
   - Imperative vs Declarative (https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2)
-- create-react-app
 
+* create-react-app (26:23)
   - npm install -g create-react-app
-
-  - What is NPM (https://medium.com/front-end-hacking/what-are-npm-yarn-babel-and-webpack-and-how-to-properly-use-them-d835a758f987)
+  - What is NPM (37:40) (https://medium.com/front-end-hacking/what-are-npm-yarn-babel-and-webpack-and-how-to-properly-use-them-d835a758f987)
   - What does this give us?
-  - react
-  - react-dom
-  - dependencies
-
-- JSX vs HTML
-
-- What is Babel
-
-  - Why do we use a transpiler?
-
-- What is Webpack?
-
-  - package
-
-- What is a component
-
+  - react (34:12)
+  - react-dom (34:12)
+  - dependencies (38:00)
+* What is a component (starts at 48:55)
   - How do we create a component
   - How do we write a component
     - extends
-    - import/export
+    - import/export (also discussed at 45:20)
     - class or function?
     - <Capitalization />
-  - What does a component return
-
-    - Single JSX element
-    - commenting
-    - className
-
-- What are props?
-
-- Rendering vs Mounting
-
+* What is Babel (1:00:00)
+  - Why do we use a transpiler?
+* What is Webpack?
+  - package
+* What does a component return (1:04:00)
+  - JSX vs HTML
+  - Single JSX element
+  - commenting
+  - className
+* What are props? (1:19:02)
+* Rendering vs Mounting (1:26:53)
   - What's the difference
   - Change in props triggers re-render
-
-- React is just JS
+* Remember: React is just JS
   - don't forget the fundamentals (iterating, filtering, async, fetch requests, defining variables, etc...)
