@@ -1,51 +1,54 @@
-## React State and Props
-
-Dan Pink, Candle Problem: https://www.youtube.com/watch?v=pfHGnCuNqfg
+## React State, Events, and Forms
 
 **Don't fall for the trap, these are tools not patterns**
 
 \*Tools from yesterday
 
-- How do we create a new react app
-- Creating a component
-- Rendering a component using <Component /> syntax
-- Props
-- import/export
-- {} for
+- Component hierarchy
+- State vs. Props
+- When to use a constructor
+- How to render a different block of code based on some condition
+- JS expressions vs. JS statements
+- When to use {}
 
 \*Tools we will learn/expand upon today
 
-- Mapping out/Strategizing an app
 - Smart Components vs. Presentational Components
-- Component Hierarchy
-  - State vs. Props
-    - setState
-    - Lifting state
-    - To use constructor or not use constructor
-    - I hate This
-- Rendering
-  - Conditional Rendering
-  - Ternaries vs. Helpers
-    - In return vs. Outside of return
-
-\*Bonus
-
+- More State
+  - setState
+  - Lifting state
+- This
+  - review
 - Events
   - Event Handlers in React vs Vanilla JS
   - Synthetic Events
     - By React so there's consistency across browsers
     - setState
       - mutating state
+- Forms
+  - Controlled vs Uncontrolled (https://reactjs.org/docs/forms.html)
 
 \*Questions Asked in Class:
 
-1. Favorite Beyonce song?
-2. How do we create a new react app?
-3. What purpose does <App /> play in our ReactDom.render() method?
-4. When writing a component as a class what will we have to extend?
-5. When writing a component as a class what method is required?
-6. What does a component return?
-7. When do we use curly boys when writing JSX?
-8. What is the difference between rendering and mounting?
-9. What are props?
-10. What is triggered when we change props?
+1. How many React apps have we built outside of labs and lecture?
+2. Why haven't we built more?
+3. What is the difference between state and props?
+
+- State can be changed
+  - Props can be changed but not by the component that receives those props. Must be changed from a component above, in the hierarchy
+- Component owns its State
+
+4. When should we use state vs props?
+
+- Use state if changes in information does not need to be sent to a component higher in the hierarchy
+- Use props to pass some information to a child component
+
+5. When should we use constructor to create state?
+
+- If we have to run some code immediately before creating state
+- One way of binding This to instance methods
+
+6. How do we pass props?
+7. **Bonus** How do we change a component's state from outside of that component?
+
+- Events, Event Listeners, etc...

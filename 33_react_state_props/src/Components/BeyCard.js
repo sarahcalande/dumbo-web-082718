@@ -1,15 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-class BeyCard extends Component {
-  render() {
-    console.log(this.props);
-    return (
-      <div>
-        <h1>{this.props.beyObj.name}</h1>
-        <img src={this.props.beyObj.img} alt="" />
-      </div>
-    );
-  }
-}
+const BeyCard = props => {
+  return (
+    <div>
+      <h1>{props.beyObj.name}</h1>
+      <img src={props.beyObj.img} alt="" onClick={props.clickHandler} />
+    </div>
+  );
+};
 
 export default BeyCard;

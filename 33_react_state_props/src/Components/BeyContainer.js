@@ -3,26 +3,38 @@ import BeyCard from "./BeyCard";
 import { BeyImages, JayImages } from "../images";
 
 class BeyContainer extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     beyImages: BeyImages,
-  //     renderOrNah: true
-  //   };
-  // }
   state = {
     beyImages: BeyImages,
-    renderOrNah: false
+    renderOrNah: true
   };
+
+  clickHandler = () => {
+    console.log("in clickHandler");
+    this.setState({
+      renderOrNah: !this.state.renderOrNah
+    });
+  };
+
   // beyCards() {
   //   return BeyImages.map(beyObj => <BeyCard />);
   // }
   render() {
-    console.log(this.state.test);
     let beyCards = this.state.beyImages.map(beyObj => (
-      <BeyCard key={beyObj.name} beyObj={beyObj} />
+      <BeyCard
+        key={beyObj.name}
+        beyObj={beyObj}
+        clickHandler={this.clickHandler}
+      />
     )); //[<BeyCard />, <BeyCard />, ...]
-    return <div>{this.state.renderOrNah ? beyCards : "FullSnack Devs"}</div>;
+    return (
+      <div>
+        {this.state.renderOrNah ? (
+          beyCards
+        ) : (
+          <h1 onClick={this.clickHandler}>FullSnack Devs</h1>
+        )}
+      </div>
+    );
   }
 }
 

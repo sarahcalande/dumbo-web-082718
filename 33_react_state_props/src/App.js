@@ -5,7 +5,7 @@ import BeyContainer from "./Components/BeyContainer";
 
 class App extends Component {
   render() {
-    return <BeyContainer test="test" />;
+    return <BeyContainer />;
   }
 }
 
