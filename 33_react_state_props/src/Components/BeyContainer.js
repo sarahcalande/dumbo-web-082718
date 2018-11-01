@@ -9,15 +9,11 @@ class BeyContainer extends Component {
     renderOrNah: true
   };
 
-  // componentDidMount() {
-  //   fetch("https://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20/")
-  //     .then(resp => resp.json())
-  //     .then(data =>
-  //       this.setState({
-  //         beyImages: data
-  //       })
-  //     );
-  // }
+  componentDidMount() {
+    fetch("https://pokeapi-215911.firebaseapp.com/api/v2/")
+      .then(resp => resp.json())
+      .then(data => console.log(data));
+  }
 
   clickHandler = () => {
     console.log("in clickHandler");
