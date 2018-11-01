@@ -14,6 +14,7 @@
 \*Tools we will learn/expand upon today
 
 - Smart Components vs. Presentational Components
+  - Calling props using props.key instead of this.props.key
 - More State
   - setState
   - Lifting state
