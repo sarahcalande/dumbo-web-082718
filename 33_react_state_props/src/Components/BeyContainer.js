@@ -9,6 +9,16 @@ class BeyContainer extends Component {
     renderOrNah: true
   };
 
+  // componentDidMount() {
+  //   fetch("https://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20/")
+  //     .then(resp => resp.json())
+  //     .then(data =>
+  //       this.setState({
+  //         beyImages: data
+  //       })
+  //     );
+  // }
+
   clickHandler = () => {
     console.log("in clickHandler");
     this.setState({
@@ -27,25 +37,20 @@ class BeyContainer extends Component {
     });
   };
 
-  // beyCards() {
-  //   return BeyImages.map(beyObj => <BeyCard />);
-  // }
   render() {
+    console.log("BeyContainer Render", this.state.renderOrNah);
     let beyCards = this.state.beyImages.map(beyObj => (
       <BeyCard
         key={beyObj.name}
         beyObj={beyObj}
         clickHandler={this.clickHandler}
+        render={this.state.renderOrNah}
       />
-    )); //[<BeyCard />, <BeyCard />, ...]
+    ));
     return (
       <div>
         <BeyForm submitHandler={this.submitHandler} />
-        {this.state.renderOrNah ? (
-          beyCards
-        ) : (
-          <h1 onClick={this.clickHandler}>FullSnack Devs</h1>
-        )}
+        {beyCards}
       </div>
     );
   }

@@ -4,7 +4,11 @@ import "./App.css";
 import BeyContainer from "./Components/BeyContainer";
 
 class App extends Component {
+  componentDidMount() {
+    console.log("App componentDidMount()");
+  }
   render() {
+    console.log("App Render");
     return <BeyContainer />;
   }
 }

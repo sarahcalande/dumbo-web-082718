@@ -4,15 +4,6 @@
 
 \*Tools from yesterday
 
-- Component hierarchy
-- State vs. Props
-- When to use a constructor
-- How to render a different block of code based on some condition
-- JS expressions vs. JS statements
-- When to use {}
-
-\*Tools we will learn/expand upon today
-
 - Smart Components vs. Presentational Components
   - Calling props using props.key instead of this.props.key
 - More State
@@ -29,27 +20,26 @@
 - Forms
   - Controlled vs Uncontrolled (https://reactjs.org/docs/forms.html)
 
+\*Tools we'll learn Today:
+
+- Component LifeCycle Methods
+  - componentDidMount()
+  - componentDidUpdate()
+  - componentWillUnmount()
+
 \*Questions Asked in Class:
 
-1. How many React apps have we built outside of labs and lecture?
-2. Why haven't we built more?
-3. What is the difference between state and props?
+1. When should we write a component as a class (aka Smart Component) vs function (Presentational Component)?
 
-- State can be changed
-  - Props can be changed but not by the component that receives those props. Must be changed from a component above, in the hierarchy
-- Component owns its State
+- Class: state, lifecycle methods, additional functions like event handlers
 
-4. When should we use state vs props?
+2. Why shouldn't we mutate state directly?
 
-- Use state if changes in information does not need to be sent to a component higher in the hierarchy
-- Use props to pass some information to a child component
+- If we mutate state directly it can impede React's ability to recognize that there was a change in state
 
-5. When should we use constructor to create state?
+3. What operator can we use to make a copy of an array or object?
 
-- If we have to run some code immediately before creating state
-- One way of binding This to instance methods
+- [...]
 
-6. How do we pass props?
-7. **Bonus** How do we change a component's state from outside of that component?
-
-- Events, Event Listeners, etc...
+4. On a scale of 1-10 how comfortable are we with React?
+5. How do you feel about React: Red Zone/Overwhelmed, Comfortable/keep practicing, Excelling/bordering on boredom?
