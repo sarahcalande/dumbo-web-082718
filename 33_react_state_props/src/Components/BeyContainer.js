@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 import BeyCard from "./BeyCard";
 import BeyForm from "./BeyForm";
+import Button from "./Button";
 import { BeyImages, JayImages } from "../images";
 
 class BeyContainer extends Component {
   state = {
     beyImages: BeyImages,
-    renderOrNah: true
+    renderOrNah: true,
+    dogImage: ""
   };
 
   componentDidMount() {
-    fetch("https://pokeapi-215911.firebaseapp.com/api/v2/")
-      .then(resp => resp.json())
-      .then(data => console.log(data));
+    this.fetchDogs();
   }
 
+  fetchDogs() {
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then(resp => resp.json())
+      .then(data =>
+        this.setState({
+          dogImage: data.message //evaluate to the image string from the data object
+        })
+      );
+  }
   clickHandler = () => {
     console.log("in clickHandler");
     this.setState({
@@ -34,11 +43,12 @@ class BeyContainer extends Component {
   };
 
   render() {
-    console.log("BeyContainer Render", this.state.renderOrNah);
+    console.log("BeyContainer Render", this.state);
     let beyCards = this.state.beyImages.map(beyObj => (
       <BeyCard
         key={beyObj.name}
         beyObj={beyObj}
+        dogImage={this.state.dogImage}
         clickHandler={this.clickHandler}
         render={this.state.renderOrNah}
       />
@@ -46,6 +56,10 @@ class BeyContainer extends Component {
     return (
       <div>
         <BeyForm submitHandler={this.submitHandler} />
+        <Button
+          render={this.state.renderOrNah}
+          clickHandler={this.clickHandler}
+        />
         {beyCards}
       </div>
     );

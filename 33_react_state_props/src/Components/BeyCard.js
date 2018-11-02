@@ -24,7 +24,14 @@ class BeyCard extends Component {
             />
           </div>
         ) : (
-          <h1 onClick={this.props.clickHandler}>FullSnack Devs</h1>
+          <div>
+            <h1>{this.props.beyObj.name}</h1>
+            <img
+              src={this.props.dogImage}
+              alt=""
+              onClick={this.props.clickHandler}
+            />
+          </div>
         )}
       </div>
     );
