@@ -29,6 +29,15 @@ fetch('http://localhost:3001/bey')
   .then(r=>r.json())
   .then(data => this.setState({
     statebeyimages: data}))
+
+    fetch('http://localhost:3001/jay')
+      .then(r=>r.json())
+      .then(data => this.setState({
+        statejayimages: data}))
+
+
+
+
 }
 
 

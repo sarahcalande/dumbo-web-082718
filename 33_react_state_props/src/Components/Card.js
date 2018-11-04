@@ -14,8 +14,7 @@ function likeImage(e){
   return (
 
     <div>
-
-      <h1>{props.state.statebeyimages.name}</h1>
+      <h1>{props.state.name}</h1>
       <img src={props.obj.img} alt="" onClick={props.clickHandler} />
       <button onClick={likeImage}> Favorite </button>
 
