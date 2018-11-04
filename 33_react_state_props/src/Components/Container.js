@@ -27,23 +27,14 @@ class Container extends Component {
 componentDidMount = ()=>{
 fetch('http://localhost:3001/bey')
   .then(r=>r.json())
-  .then(data => this.setState({
+  .then((data)=> this.setState({
     statebeyimages: data}))
 
     fetch('http://localhost:3001/jay')
       .then(r=>r.json())
-      .then(data => this.setState({
+      .then((data) => this.setState({
         statejayimages: data}))
-
-
-
-
 }
-
-
-
-
-
 
   clickHandler = () => {
     console.log("in clickHandler");
@@ -77,16 +68,19 @@ fetch('http://localhost:3001/bey')
 //
   render(){
 
-// let beyCards = this.state.statebeyimages.map(obj => <Card key = {obj.name} name = {obj.name} img = {obj.img}/>)
-//
-// let jayCards = this.state.statejayimages.map(obj => <Card key = {obj.name} name = {obj.name} img = {obj.img}/>)
-//
+
+let JayCards = this.state.statejayimages.map(obj => <Card key = {obj.name} name = {obj.name} img = {obj.img}/>)
+
+let beyCards = this.state.statebeyimages.map(obj => <Card key = {obj.name} name = {obj.name} img = {obj.img}/>)
 
     return (
       <div>
         <BeyForm submitHandler={this.submitHandler} />
         {this.state.renderOrNah ? (
-        < Card beyCards Card jayCards/>
+          <div>
+        <div>{beyCards}</div>
+        <div>{JayCards}</div>
+        </div>
         ) : (
           <h1 onClick={this.clickHandler}>Not Rendered</h1>
         )}

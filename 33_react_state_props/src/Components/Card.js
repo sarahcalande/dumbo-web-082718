@@ -1,25 +1,25 @@
-import React from "react";
+import React, {Component} from "react";
 
 
 
 
-const Card = (props, state) => {
+class Card extends Component{
 
 
-function likeImage(e){
+likeImage=(e)=>{
   e.target.parentElement.innerHTML += '<3'
 }
 
-
+render(){
   return (
-
     <div>
-      <h1>{props.state.name}</h1>
-      <img src={props.obj.img} alt="" onClick={props.clickHandler} />
-      <button onClick={likeImage}> Favorite </button>
+      <h1>{this.props.name}</h1>
+      <img src={this.props.img} alt="" onClick={this.props.clickHandler} />
+      <button onClick={this.likeImage}> Favorite </button>
 
     </div>
   );
+}
 };
 
 export default Card;
